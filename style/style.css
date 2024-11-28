@@ -138,19 +138,19 @@ p {
 }
 .srtadium-img .position6 {
   bottom: 60%;
-  right: 10px;
+  right: 10%;
 }
 .srtadium-img .position7 {
   bottom: 60%;
-  left: 30%;
+  left: 57%;
 }
 .srtadium-img .position8 {
   bottom: 60%;
-  right: 30%;
+  left: 30%;
 }
 .srtadium-img .position9 {
   bottom: 60%;
-  left: 10px;
+  left: 10%  ;
 }
 .srtadium-img .position10 {
   bottom: 80%;
@@ -414,16 +414,99 @@ option {
 
 /* Tablet view (768px and up) */
 
-@media (min-width: 768px) {
+@media (max-width: 1130px) {
     .srtadium-img {
         width: 100%;
+    }
+    .players-box{
+        width: 100%;
+    }
+    .div-all {
+        flex-direction: column-reverse;
+        padding: 0 20px;
     }
 
 
 }
+@media (max-width: 1130px) {
+    .srtadium-img {
+        width: 100%;
+    }
+    .players-box{
+        width: 100%;
+    }
+    .div-all {
+        flex-direction: column-reverse;
+        padding: 0 20px;
+    }
+
+}
+
   /* Desktop view (1024px and up) */
 @media (min-width: 1024px) {
    
 
 
   }
+  .formForModify {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.formForModify h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formForModify .inputs {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.formForModify input,
+.formForModify select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formForModify .btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.formForModify button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#updateInfo {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelModify {
+    background-color: #f44336;
+    color: white;
+}
+
+.info {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.info:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

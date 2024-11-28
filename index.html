@@ -31,63 +31,26 @@
                 
             </div>
             <div id="P4_4_2" >
-                <div class="position position6">
+                <div class="position position6" id="position6">
                 
                 </div>
-                <div class="position position7">
+                <div class="position position7" id="position6">
                     
                 </div>
-                <div class="position position8">
+                <div class="position position8" id="position6">
                     
                 </div>
-                <div class="position position9">
+                <div class="position position9" id="position6">
                     
                 </div>
-                <div class="position position10">
+                <div class="position position10" id="position6">
                     
                 </div>
-                <div class="position position11">
+                <div class="position position11" id="position6">
                     
                 </div>
             </div>
-            <div id="P4_3_3"  style="display: none;">
-                <!-- <div class="position position12">
             
-                </div>
-                <div class="position position13">
-                    
-                </div>
-                <div class="position position14">
-                    
-                </div>
-                <div class="position position15">
-                    
-                </div>
-                <div class="position position16">
-                    
-                </div>
-                <div class="position position17">
-                    
-                </div> -->
-                <div class="position position6">
-                
-                </div>
-                <div class="position position7">
-                    
-                </div>
-                <div class="position position8">
-                    
-                </div>
-                <div class="position position9">
-                    
-                </div>
-                <div class="position position10">
-                    
-                </div>
-                <div class="position position11">
-                    
-                </div>
-            </div>
               
         </div>
         <div class="players-box">
@@ -224,7 +187,40 @@
                     </div> 
                 </div>
             </div>
-            
+            <div id="formForModify" class="displayNone">
+                <h2>Modify Player</h2>
+                <div class="inputs">
+                    <input type="text" id="modifyPlayerName" placeholder="Player Name">
+                    <input type="text" id="modifyPlayerPhoto" placeholder="Player Photo URL">
+                    <select id="modifyPlayerPosition">
+                        <option value="">Select Position</option>
+                        <option value="ST">ST</option>
+                        <option value="CF">CF</option>
+                        <option value="LW">LW</option>
+                        <option value="RW">RW</option>
+                        <option value="CAM">CAM</option>
+                        <option value="CM">CM</option>
+                        <option value="CDM">CDM</option>
+                        <option value="LB">LB</option>
+                        <option value="CB">CB</option>
+                        <option value="RB">RB</option>
+                        <option value="GK">GK</option>
+                    </select>
+                    <input type="text" id="modifyPlayerNationality" placeholder="Nationality">
+                    <input type="text" id="modifyClubPhoto" placeholder="Club Photo URL">
+                    <input type="number" id="modifyPlayerRating" placeholder="Rating" min="1" max="99">
+                    <input type="number" id="modifyPlayerPace" placeholder="Pace" min="1" max="99">
+                    <input type="number" id="modifyPlayerShooting" placeholder="Shooting" min="1" max="99">
+                    <input type="number" id="modifyPlayerPassing" placeholder="Passing" min="1" max="99">
+                    <input type="number" id="modifyPlayerDribbling" placeholder="Dribbling" min="1" max="99">
+                    <input type="number" id="modifyPlayerDefending" placeholder="Defending" min="1" max="99">
+                    <input type="number" id="modifyPlayerPhysical" placeholder="Physical" min="1" max="99">
+                </div>
+                <div class="btns">
+                    <button id="updateInfo">Update Player</button>
+                    <button id="cancelModify">Cancel</button>
+                </div>
+            </div>
     </div>
    
     <script src="./js/script.js"></script>

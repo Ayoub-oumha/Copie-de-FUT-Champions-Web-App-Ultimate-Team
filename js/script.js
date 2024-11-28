@@ -4,20 +4,31 @@
 //   localStorage.setItem("data", JSON.stringify(data));
 // }
 // AddtolocalstoragevideData();
-
+let position6 = document.querySelectorAll("#position6");
+console.log(position6)
 let lkhota = document.getElementById("lkhota");
 
 lkhota.addEventListener("change", () => {
-  let divP4_4_2 = document.getElementById("P4_4_2");
-  let divP4_3_3 = document.getElementById("P4_3_3");
+  
   if (lkhota.value === "4-3-3") {
-    divP4_3_3.style.display = "block";
-    divP4_4_2.style.display = "none";
+            position6[0].style = " bottom: 60%; right: 10%;"
+            position6[1].style = " bottom: 60%; left: 40%;"
+            position6[2].style = " bottom: 60%; left: 10%;"
+            position6[3].style = " bottom: 80%; left: 10%;"
+            position6[4].style = " bottom: 80%; left: 40%;"
+            position6[5].style = " bottom: 80%; left: 70%;"
   } else {
-    divP4_3_3.style.display = "none";
-    divP4_4_2.style.display = "block";
+            position6[0].style = " bottom: 60%; right: 10%;"
+            position6[1].style = " bottom: 60%; left: 30%;"
+            position6[2].style = " bottom: 60%; left: 30%;"
+            position6[3].style = " bottom: 60%; left: 10%;"
+            position6[4].style = " bottom: 80%; right: 30%;"
+            position6[5].style = " bottom: 80%; left: 30%;"
   }
 });
+
+
+
 function addPlayer() {
   let btnForAddPlayer = document.getElementById("btnForAddPlayer");
   let annuleBtn = document.getElementById("annule");
@@ -246,3 +257,8 @@ function DrageAndDrop() {
 }
 
 DrageAndDrop();
+
+function modificationPlayer(){
+    console.log("h")
+}
+modificationPlayer()
