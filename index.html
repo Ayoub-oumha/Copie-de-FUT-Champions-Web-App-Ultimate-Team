@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="div-all">
+        <div class="srtadium-img">
+            <!-- <div class="img-cover">
+                <img src="./img/stadium_background.webp" alt="">
+            </div> -->
+            <!-- <div class="position position1">
+                
+            </div> -->
+            <div class="position position1">
+                
+            </div>
+            <div class="position position2">
+                
+            </div>
+            <div class="position position3">
+                
+            </div>
+            <div class="position position4">
+                
+            </div>
+            <div class="position position5">
+                
+            </div>
+            <div id="P4_4_2" >
+                <div class="position position6">
+                
+                </div>
+                <div class="position position7">
+                    
+                </div>
+                <div class="position position8">
+                    
+                </div>
+                <div class="position position9">
+                    
+                </div>
+                <div class="position position10">
+                    
+                </div>
+                <div class="position position11">
+                    
+                </div>
+            </div>
+            <div id="P4_3_3"  style="display: none;">
+                <!-- <div class="position position12">
+            
+                </div>
+                <div class="position position13">
+                    
+                </div>
+                <div class="position position14">
+                    
+                </div>
+                <div class="position position15">
+                    
+                </div>
+                <div class="position position16">
+                    
+                </div>
+                <div class="position position17">
+                    
+                </div> -->
+                <div class="position position6">
+                
+                </div>
+                <div class="position position7">
+                    
+                </div>
+                <div class="position position8">
+                    
+                </div>
+                <div class="position position9">
+                    
+                </div>
+                <div class="position position10">
+                    
+                </div>
+                <div class="position position11">
+                    
+                </div>
+            </div>
+              
+        </div>
+        <div class="players-box">
+            <div class="btns">
+                
+                <select name="lkhota" id="lkhota">
+                    <option value="4-4-2">
+                        4-4-2
+                    </option>
+                    <option value="4-3-3">
+                        4-3-3
+                    </option>
+                   
+                </select>
+                <button id="btnForAddPlayer">Add player</button>
+            </div> 
+            <div class="players" id="players">
+                
+                <!-- <div class="position ">
+                    <div class="info">
+                        <div class="rating">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                           <div class="img">
+                            <img src="./img/messi img.webp" alt="">
+                           </div>
+                           <div class="name">
+                            <p>Messi</p>
+                           </div>
+                           <div class="other-info">
+                           
+                               <div class="pace">
+                                <p>90</p>
+                                <p>CF</p>
+                               </div>
+                               <div class="shooting">
+                                <p>90</p>
+                                <p>CF</p>
+                               </div>
+                               <div class="passing">
+                                <p>90</p>
+                                <p>CF</p>
+                               </div>
+                               <div class="dribbling">
+                                <p>90</p>
+                                <p>CF</p>
+                               </div>
+                               <div class="defending">
+                                <p>90</p>
+                                <p>CF</p>
+                               </div>
+                               <div class="physical">
+                                <p>90</p>
+                                <p>CF</p>
+                               </div>
+                           </div>
+                           
+                           
+                           <div class="flag">
+                            <p>Maroc</p>
+                            
+                           </div>
+                            
+                    </div>
+     
+                </div>
+                 -->
+            
+            </div>
+            <div id="formForAdd" class="displayNone">
+                <div>Add Player Information</div>
+                <div><button id="saveInfo">Save</button> <button id="annule">Annule</button></div>
+                <div class="form">
+                    <div class="inpt"> 
+                        <label for="playerName">Player Name</label>
+                        <input type="text" id="playerName" name="name" placeholder="name...">
+                    </div>  
+                    <div class="inpt"> 
+                        <label for="playerPhoto">Player Photo URL</label>
+                        <input type="text" id="playerPhoto" name="photo" placeholder="photo...">
+                    </div>  
+                    <div class="inpt"> 
+                        <label for="playerPosition">Position</label>
+                        <select name="position" id="playerPosition">
+                            <option value="">Position</option>
+                            <option value="GK">GK</option>
+                            <option value="CB">CB</option>
+                            <option value="LB">LB</option>
+                            <option value="RB">RB</option>
+                            <option value="CM">CM</option>
+                            <option value="LW">LW</option>
+                            <option value="RW">RW</option>
+                            <option value="ST">ST</option>
+                            <option value="LM">LM</option>
+                            <option value="RM">RM</option>
+                        </select>
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerNationality">Nationality</label>
+                        <input type="text" id="playerNationality" name="nationality" placeholder="Nationality">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="clubPhoto">Club Photo URL</label>
+                        <input type="text" id="clubPhoto" name="clubPhoto" placeholder="club photo...">
+                    </div>  
+                    <div class="inpt"> 
+                        <label for="playerPace">Pace</label>
+                        <input type="number" id="playerPace" name="pace" placeholder="pace">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerShooting">Shooting</label>
+                        <input type="number" id="playerShooting" name="shooting" placeholder="Shooting">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerPassing">Passing</label>
+                        <input type="number" id="playerPassing" name="passing" placeholder="Passing">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerDribbling">Dribbling</label>
+                        <input type="number" id="playerDribbling" name="dribbling" placeholder="Dribbling">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerDefending">Defending</label>
+                        <input type="number" id="playerDefending" name="defending" placeholder="Defending">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerPhysical">Physical</label>
+                        <input type="number" id="playerPhysical" name="physical" placeholder="Physical">
+                    </div> 
+                    <div class="inpt"> 
+                        <label for="playerRating">Rating</label>
+                        <input type="number" id="playerRating" name="rating" placeholder="rating">
+                    </div> 
+                </div>
+            </div>
+            
+    </div>
+   
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <div class="position- ">
+                <div class="info">
+                    <div class="rating">
+                        <p>90</p>
+                        <p>CF</p>
+                       </div>
+                       <div class="img">
+                        <img src="./img/messi img.webp" alt="">
+                       </div>
+                       <div class="name">
+                        <p>Messi</p>
+                       </div>
+                       <div class="other-info">
+                       
+                           <div class="pace">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                           <div class="shooting">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                           <div class="passing">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                           <div class="dribbling">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                           <div class="defending">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                           <div class="physical">
+                            <p>90</p>
+                            <p>CF</p>
+                           </div>
+                       </div>
+                       
+                       
+                       <div class="flag">
+                        <p>Maroc</p>
+                        
+                       </div>
+                        
+                </div>
+                -->

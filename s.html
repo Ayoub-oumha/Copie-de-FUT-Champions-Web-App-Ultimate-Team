@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 , .box2 {
+            border: 1px solid black;
+            width: 100PX;
+            height: 100px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="box1">
+        <div id="pp" draggable="true">
+           <p>hh</p>
+            <img src="./img/badge_gold.webp" alt="">
+        </div>
+    </div>
+    <div class="box2" id="box2">
+        
+    </div>
+    <div class="box2" id="box2">
+        
+    </div>
+    <div class="box2" id="box2">
+        
+    </div>
+    <div class="box2" id="box2">
+        
+    </div>
+
+    <script>
+        let box1 = document.getElementById("box1")
+        let box2 = document.querySelectorAll("#box2")
+        let pp = document.getElementById("pp")
+        let data = null ;
+        // pp.addEventListener('drag' , ()=>{
+            
+        // })
+        pp.addEventListener('dragstart' , ()=>{
+            pp.style.opacity = "0.5"
+            data = pp
+        })
+        pp.addEventListener('dragend' , ()=>{
+            pp.style.opacity = "1" ;
+            data = null
+        })
+        box2.forEach(box2 =>{
+            box2.addEventListener("dragover" , (e)=>{
+         box2.style.backgroundColor = "red"
+        e.preventDefault()
+      
+       })
+       box2.addEventListener("dragleave" , ()=>{
+       box2.style.backgroundColor = "white"
+       })
+       box2.addEventListener("drop" , ()=>{
+       box2.append(data) 
+         box2.style.backgroundColor = "white"
+       })
+        })
+       
+    </script>
+</body>
+</html>
