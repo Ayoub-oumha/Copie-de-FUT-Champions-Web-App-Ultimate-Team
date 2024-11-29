@@ -180,6 +180,7 @@ function playersFromLocalStorage() {
     posi.innerHTML = content;
     players.append(posi);
   });
+  modificationPlayer();
 }
 playersFromLocalStorage();
 
@@ -222,43 +223,215 @@ playersFromLocalStorage();
 // }
 // DrageAndDrop()
 
-function DrageAndDrop() {
-    let divForDrage = document.querySelectorAll(".info");
-    let boxforDrop = document.querySelectorAll(".position");
-    let draggedElement = null;
+// function DrageAndDrop() {
+//     let divForDrage = document.querySelectorAll(".info");
+//     let boxforDrop = document.querySelectorAll(".position");
+//     let draggedElement = null;
 
-    divForDrage.forEach(div => {
-        div.addEventListener('dragstart', () => {
-            div.style.opacity = "0.5";
-            draggedElement = div;
+//     divForDrage.forEach(div => {
+//         div.addEventListener('dragstart', () => {
+//             div.style.opacity = "0.5";
+//             draggedElement = div;
             
-        });
-        div.addEventListener('dragend', () => {
-            div.style.opacity = "1";
-            draggedElement = null;
+//         });
+//         div.addEventListener('dragend', () => {
+//             div.style.opacity = "1";
+//             draggedElement = null;
+//         });
+//     });
+
+//     boxforDrop.forEach(div => {
+//         div.addEventListener("dragover", (e) => {
+//             div.style.boxShadow = "0 0 10px black";
+//             e.preventDefault(); // Allows dropping
+//         });
+//         div.addEventListener("dragleave", () => {
+//             div.style.boxShadow = "none";
+//         });
+//         div.addEventListener("drop", () => {
+//             if (draggedElement) {
+//                 div.append(draggedElement); // Append the dragged element
+//                 div.style.boxShadow = "none";
+//             }
+//         });
+//     });
+// }
+
+// DrageAndDrop();
+
+function modificationPlayer() {
+    const formForModify = document.getElementById("formForModify");
+    const players = document.querySelectorAll(".position");
+    const cancelModify = document.getElementById("cancelModify");
+    const updateInfo = document.getElementById("updateInfo");
+
+    // Check if form and buttons exist
+    if (!formForModify || !cancelModify || !updateInfo) {
+        console.error("Form or buttons not found.");
+        return;
+    }
+
+    players.forEach(player => {
+        const playerInfo = player.querySelector(".info");
+        if (!playerInfo) return; // Skip if .info element doesn't exist
+
+        playerInfo.addEventListener("click", () => {
+            const playerName = playerInfo.querySelector(".name p").textContent;
+            const dataFromlocalStorage = JSON.parse(localStorage.getItem("data")) || [];
+            const playerData = dataFromlocalStorage.find(p => p.name === playerName);
+
+            if (playerData) {
+                // Fill the form with player data
+                document.getElementById("modifyPlayerName").value = playerData.name;
+                document.getElementById("modifyPlayerPhoto").value = playerData.photo;
+                document.getElementById("modifyPlayerPosition").value = playerData.position;
+                document.getElementById("modifyPlayerNationality").value = playerData.nationality;
+                document.getElementById("modifyClubPhoto").value = playerData.flag;
+                document.getElementById("modifyPlayerRating").value = playerData.rating;
+                document.getElementById("modifyPlayerPace").value = playerData.pace;
+                document.getElementById("modifyPlayerShooting").value = playerData.shooting;
+                document.getElementById("modifyPlayerPassing").value = playerData.passing;
+                document.getElementById("modifyPlayerDribbling").value = playerData.dribbling;
+                document.getElementById("modifyPlayerDefending").value = playerData.defending;
+                document.getElementById("modifyPlayerPhysical").value = playerData.physical;
+
+                // Show the modify form
+                formForModify.classList.remove("displayNone");
+            } else {
+                console.error("Player data not found for:", playerName);
+            }
         });
     });
 
-    boxforDrop.forEach(div => {
-        div.addEventListener("dragover", (e) => {
-            div.style.boxShadow = "0 0 10px black";
-            e.preventDefault(); // Allows dropping
-        });
-        div.addEventListener("dragleave", () => {
-            div.style.boxShadow = "none";
-        });
-        div.addEventListener("drop", () => {
-            if (draggedElement) {
-                div.append(draggedElement); // Append the dragged element
-                div.style.boxShadow = "none";
+    // Handle cancel button
+    cancelModify.addEventListener("click", () => {
+        formForModify.classList.add("displayNone");
+    });
+
+    // Handle update button
+    updateInfo.addEventListener("click", () => {
+        const originalName = document.getElementById("modifyPlayerName").value;
+        const dataFromlocalStorage = JSON.parse(localStorage.getItem("data")) || [];
+        const index = dataFromlocalStorage.findIndex(p => p.name === originalName);
+
+        if (index !== -1) {
+            // Update player data
+            dataFromlocalStorage[index] = {
+                name: document.getElementById("modifyPlayerName").value,
+                photo: document.getElementById("modifyPlayerPhoto").value,
+                position: document.getElementById("modifyPlayerPosition").value,
+                nationality: document.getElementById("modifyPlayerNationality").value,
+                flag: document.getElementById("modifyClubPhoto").value,
+                rating: document.getElementById("modifyPlayerRating").value,
+                pace: document.getElementById("modifyPlayerPace").value,
+                shooting: document.getElementById("modifyPlayerShooting").value,
+                passing: document.getElementById("modifyPlayerPassing").value,
+                dribbling: document.getElementById("modifyPlayerDribbling").value,
+                defending: document.getElementById("modifyPlayerDefending").value,
+                physical: document.getElementById("modifyPlayerPhysical").value
+            };
+
+            // Save to localStorage and refresh display
+            localStorage.setItem("data", JSON.stringify(dataFromlocalStorage));
+            playersFromLocalStorage(); // Refresh the player list
+
+            // Hide the form
+            formForModify.classList.add("displayNone");
+        } else {
+            console.error("Player not found in localStorage:", originalName);
+        }
+    });
+}
+
+// Call playersFromLocalStorage to load players and set up modification
+function playersFromLocalStorage() {
+    let players = document.getElementById("players");
+    players.textContent = ""; // Clear existing players
+    let dataFromlocalStorage = JSON.parse(localStorage.getItem("data")) || [];
+    
+    dataFromlocalStorage.forEach((element, index) => {
+        let posi = document.createElement("div");
+        posi.classList = "position";
+        let content = `<div class="info" draggable="true">
+                        <div class="rating">
+                            <p>${element.rating}</p>
+                            <p>${element.position}</p>
+                        </div>
+                        <div class="img">
+                            <img src="${element.photo}" alt="">
+                        </div>
+                        <div class="name">
+                            <p>${element.name}</p>
+                        </div>
+                        <div class="other-info">
+                            <div class="pace">
+                                <p>PAC</p>
+                                <p>${element.pace}</p>
+                            </div>
+                            <div class="shooting">
+                                <p>SHO</p>
+                                <p>${element.shooting}</p>
+                            </div>
+                            <div class="passing">
+                                <p>PAS</p>
+                                <p>${element.passing}</p>
+                            </div>
+                            <div class="dribbling">
+                                <p>DRI</p>
+                                <p>${element.dribbling}</p>
+                            </div>
+                            <div class="defending">
+                                <p>DEF</p>
+                                <p>${element.defending}</p>
+                            </div>
+                            <div class="physical">
+                                <p>PHY</p>
+                                <p>${element.physical}</p>
+                            </div>
+                        </div>
+                        <div class="flagPhoto">
+                            <img src="${element.flag}" alt="">
+                        </div>
+                        <div class="flag">
+                            <p>${element.nationality}</p>
+                        </div>
+                        <button class="deletePlayer" data-index="${index}">Delete</button>
+                    </div>`;
+        
+        posi.innerHTML = content;
+        players.append(posi);
+    });
+
+    modificationPlayer(); // Set up modification functionality
+    DeletPlayer(); // Set up delete button functionality
+}
+
+// Ensure to call playersFromLocalStorage when the DOM is ready
+document.addEventListener("DOMContentLoaded", playersFromLocalStorage);
+
+
+
+function DeletPlayer() {
+    // Get the delete button element
+    let deleteButtons = document.querySelectorAll(".deletePlayer");
+
+    // Add event listeners to each delete button
+    deleteButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            // Confirm deletion
+            if (confirm("Are you sure you want to delete this player?")) {
+                // Get the current data from localStorage
+                let dataFromLocalStorage = JSON.parse(localStorage.getItem("data")) || [];
+                
+                // Remove the player from the array
+                dataFromLocalStorage.splice(index, 1);
+                
+                // Update localStorage
+                localStorage.setItem("data", JSON.stringify(dataFromLocalStorage));
+                
+                // Refresh the player list
+                playersFromLocalStorage();
             }
         });
     });
 }
-
-DrageAndDrop();
-
-function modificationPlayer(){
-    console.log("h")
-}
-modificationPlayer()
