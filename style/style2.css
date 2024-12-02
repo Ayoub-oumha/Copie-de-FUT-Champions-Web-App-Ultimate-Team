@@ -1,0 +1,396 @@
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  color: white;
+  font-family:sans-serif;
+ 
+}
+body {
+  background: rgb(87, 139, 221);
+  background: radial-gradient(
+    circle,
+    rgba(87, 139, 221, 1) 0%,
+    rgba(1, 41, 88, 1) 100%
+  );
+  background-image: -webkit-radial-gradient(ellipse, #666b74 0, #111212 100%);
+  height: 100vh;
+  
+}
+/* headerr */
+input , select  {
+    background: transparent;
+    border: 1px #ffffff59 solid;
+    
+    padding: 6px;
+    outline: none;
+}
+
+option {
+    background-color: black;
+   
+    color: wheat;
+    font-size: 16px;
+    padding: 5px; /* This may not apply in all browsers */
+}
+option:focus {
+    background-color: white;
+    
+}
+
+
+button {
+    padding: 7px 10px;
+ 
+    background: transparent;
+    border: none;
+    border: 1px #ffffff59 solid;
+    cursor: pointer;
+    
+ 
+}
+button:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.429);
+}
+.header {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding:  20px 0;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.429);
+}
+.content {
+    padding: 10px 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*       terain    */
+.terian {
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 40%;
+   height: max-content;
+}
+.terian .img-tirain {
+    height: 100%;
+}
+
+/* players */
+.box-ofplayers {
+     padding: 10px 20px;
+     width: 60%;
+}
+
+
+.divplayer {
+    display: flex;
+ flex-wrap: wrap;
+   
+    
+ gap: 10px;
+ padding: 0 10px;
+ 
+    height: 100vh;
+    overflow: auto;
+}
+.player {
+    position: relative;
+    overflow: hidden;
+    height: max-content;
+}
+.player   .info_country{
+    display: block ;
+    position: absolute;
+    top: 12% ;
+    left: 6%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 3px;
+ 
+
+}
+
+.player  .info_country p {
+   margin-left: 5%;
+   font-size: 20px;
+}
+
+
+.player  .info_country img {
+    width: 20%;
+}
+.player  .imgPlayer img{
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.player .namePlayer {
+    position: absolute;
+    bottom: 42%;
+    right: 50%;
+    transform: translate(50%);
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    
+    
+}
+
+.player .sta1{
+    position: absolute;
+    bottom: 12%;
+    left: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+   
+}
+
+.player .sta1 p{
+    text-align: center;
+    font-weight:bolder;
+}
+
+/* form add player */
+
+.formAddplayer {
+    position: absolute;
+    width: 320px;
+    
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 77;
+    top: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: #fff;
+}
+.form-group input::placeholder {
+    color: #bbb;
+}
+.form-group button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-group .btn-add {
+    background-color: #28a745;
+    color: #fff;
+}
+.form-group .btn-add:hover {
+    background-color: #218838;
+}
+.form-group .btn-cancel {
+    background-color: #dc3545;
+    color: #fff;
+}
+.form-group .btn-cancel:hover {
+    background-color: #c82333;
+}
+.form-group .btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* terian */
+.terian {
+    position: relative;
+    z-index: 50;
+    
+}
+.terian .contentOFttiraion {
+    position: relative;
+}
+.position {
+    position: absolute;
+    transition: all 0.5s;
+    width: 16%;
+}
+.position #imgbg{
+    width: 100%;
+}
+
+
+  .terian .position1 {
+    bottom: 5%;
+    right: 50%;
+    transform: translate(50%);
+  }
+  .terian .position2 {
+    bottom: 30%;
+    right: 10%;
+  }
+  .terian .position3 {
+    bottom: 25%;
+    left: 30%;
+  }
+  .terian .position4 {
+    bottom: 25%;
+    right: 30%;
+  }
+  .terian .position5 {
+    bottom: 30%;
+    left: 10%;
+  }
+
+  
+  .terian .position6 {
+    bottom: 60%;
+    right: 10%;
+  }
+  .terian .position7 {
+    bottom: 50%;
+    right: 30%;
+  }
+  .terian .position8 {
+    bottom: 50%;
+    left: 30%;
+  }
+  .terian .position9 {
+    bottom: 60%;
+    left: 10%  ;
+  }
+  .terian .position10 {
+    bottom: 78%;
+    right: 30%;
+  }
+  .terian .position11 {
+    bottom: 78%;
+    left: 30%;
+  }
+
+  .terian  .position .info-player .imgPlayer img{
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    border-radius: 50%;
+    border: 2px solid white;
+    transform: translate(50%);
+}
+.terian  .position .info-player .info_country{
+    display: block ;
+    position: absolute;
+   
+    
+    display: flex;
+    right: 50%;
+    transform: translate(50%);
+    gap: 5%;
+    bottom: 13%;
+
+}
+.terian  .position .info-player .info_country p {
+    font-size: 13px;
+}
+.terian  .position .namePlayer {
+    position: absolute;
+    top: 58% ;
+    right: 50%;
+    transform: translate(50%);
+    font-size: 12px;
+ 
+    white-space: nowrap;
+    
+    
+}
+.terian  .position .info-player .info_country img {
+    width: 20%;
+    display: none;
+}
+  
+  .terian  .position .info-player .sta1{
+    display:none;
+    
+  }
+
+/* Styles pour les tablettes (largeur entre 768px et 1024px) */
+@media  (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 5px;
+        justify-content: start  ;
+        padding: 10px 0;
+    }
+    .divForinput{
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+    }
+    .divForinput:nth-child(3){
+        justify-content: center;
+    }
+    .content {
+        padding: 10px 20px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .terian {
+       
+      
+       width: 100%;
+       display: flex;
+   
+       justify-content: center;
+    }
+    .terian .img-tirain {
+    
+        height: 100%;
+    }
+    .box-ofplayers {
+        width: 100%;
+        padding: 10px 0;
+    }
+   
+}
+
+
+
+/* Styles pour les mobiles (largeur maximale de 767px) */
+@media (max-width: 767px) {
+    .terian .img-tirain {
+    
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+
+.display_none{
+    display: none;
+}

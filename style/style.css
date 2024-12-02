@@ -47,8 +47,8 @@ p {
 } */
 .srtadium-img .position {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 15%;
+  height: 15%;
   background-image: url("../img/badge_gold.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -57,7 +57,7 @@ p {
 .srtadium-img .position .info {
   position: relative;
   width: 100%;
-  height: 100%;
+ 
 }
 .srtadium-img .position .info .rating,
 .srtadium-img .position .info .img,
@@ -558,4 +558,14 @@ option {
   #formForModify button {
       padding: 10px 20px;
   }
+}
+
+
+.deletePlayer {
+  padding: 10px ;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
