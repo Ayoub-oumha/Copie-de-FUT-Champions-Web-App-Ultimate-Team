@@ -1,307 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style/style.css">
-</head>
-<body>
-    <div class="div-all">
-        <div class="srtadium-img">
-            <!-- <div class="img-cover">
-                <img src="./img/stadium_background.webp" alt="">
-            </div> -->
-            <!-- <div class="position position1">
+    <link rel="stylesheet" href="./style/style2.css" />
+  </head>
+  <body>
+    <div>
+      <div class="barAndbtn">
+        <div class="header">
+          <!-- <div class="divForinput">
+            <label for="SquadTitle">Squad Title :</label>
+            <input type="text" id="SquadTitle" />
+          </div> -->
+          <div class="divForinput">
+            <label for="Formation">Formation:</label>
+            <select name="selectFormation" id="Formation">
                 
-            </div> -->
-            <div class="position position1">
-                
-            </div>
-            <div class="position position2">
-                
-            </div>
-            <div class="position position3">
-                
-            </div>
-            <div class="position position4">
-                
-            </div>
-            <div class="position position5">
-                
-            </div>
-            <div id="P4_4_2" >
-                <div class="position position6" id="position6">
-                
-                </div>
-                <div class="position position7" id="position6">
-                    
-                </div>
-                <div class="position position8" id="position6">
-                    
-                </div>
-                <div class="position position9" id="position6">
-                    
-                </div>
-                <div class="position position10" id="position6">
-                    
-                </div>
-                <div class="position position11" id="position6">
-                    
-                </div>
-            </div>
-            
-              
+                <option value="4_4_2">4-4-2</option>
+                <option value="4_3_3">4-3-3</option>
+            </select>
+          </div>
+          <div class="divForinput"> <button id="Addplayerbtn">Add player</button></div>
+         
         </div>
-        <div class="players-box">
-            <div class="btns">
-                
-                <select name="lkhota" id="lkhota">
-                    <option value="4-4-2">
-                        4-4-2
-                    </option>
-                    <option value="4-3-3">
-                        4-3-3
-                    </option>
-                   
-                </select>
-                <button id="btnForAddPlayer">Add player</button>
-            </div> 
-            <div class="players" id="players">
-                
-                <!-- <div class="position ">
-                    <div class="info">
-                        <div class="rating">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                           <div class="img">
-                            <img src="./img/messi img.webp" alt="">
-                           </div>
-                           <div class="name">
-                            <p>Messi</p>
-                           </div>
-                           <div class="other-info">
-                           
-                               <div class="pace">
-                                <p>90</p>
-                                <p>CF</p>
-                               </div>
-                               <div class="shooting">
-                                <p>90</p>
-                                <p>CF</p>
-                               </div>
-                               <div class="passing">
-                                <p>90</p>
-                                <p>CF</p>
-                               </div>
-                               <div class="dribbling">
-                                <p>90</p>
-                                <p>CF</p>
-                               </div>
-                               <div class="defending">
-                                <p>90</p>
-                                <p>CF</p>
-                               </div>
-                               <div class="physical">
-                                <p>90</p>
-                                <p>CF</p>
-                               </div>
-                           </div>
-                           
-                           
-                           <div class="flag">
-                            <p>Maroc</p>
-                            
-                           </div>
-                            
+      </div>
+      <div class="content">
+        <div class="terian">
+            <div class="contentOFttiraion">
+                <img class="img-tirain" src="./img/tirain.png" alt="">
+                <div>
+                    <div class="position position1">
+                      
                     </div>
-     
+                    <div class="position position2">
+                      
+                    </div>
+                    <div class="position position3">
+                       
+                    </div>
+                    <div class="position position4">
+                      
+                    </div>
+                    <div class="position position5">
+                       
+                    </div>
+                 
+                    <div class="position position6">
+                       
+                    </div>
+                    <div class="position position7 " >
+                        
+                    </div>
+                    <div class="position position8">
+                       
+                    </div>
+                    <div class="position position9">
+                 
+                    </div>
+                    <div class="position position10">
+                  
+                        
+                    </div>
+                    <div class="position position11">
+
+                        <div class="player dropzone" id="1" draggable="true" > 
+                            <img src="./img/placeholder-card-normal.webp" alt="" class="imgbg">
+                            <div class="info-player">
+                                <div class="info_country">
+                                    <p>54</p>
+                                    <p>RM</p>
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png" alt="">
+                                    <img src="https://i.ebayimg.com/images/g/o7AAAOSwYWBifW~t/s-l1200.jpg" alt="">
+                                </div>
+                                <div class="imgPlayer">
+                                    <img src="./img/messi img.webp" alt="">
+                                </div>
+                                <p class="namePlayer">Leah</p>
+                                <div class="sta1">
+                                    <div>
+                                        <p>PAC</p>
+                                        <p>98</p>
+                                    </div>
+                                    <div>
+                                        <p>SHO</p>
+                                        <p>62</p>
+                                    </div>
+                                    <div>
+                                        <p>PAS</p>
+                                        <p>81</p>
+                                    </div>
+                                    <div>
+                                        <p>DRI</p>
+                                        <p>99</p>
+                                    </div>
+                                    <div>
+                                        <p>DEF</p>
+                                        <p>8</p>
+                                    </div>
+                                    <div>
+                                        <p>PHY</p>
+                                        <p>82</p>
+                                    </div>
+                                </div></div>
+                        </div>
+                        
+                    </div>
                 </div>
-                 -->
+            </div>
+          
+        </div>
+        <div class="box-ofplayers">
             
+            <div id="divplayer" class="divplayer">
+               
+                
             </div>
-            <div id="formForAdd" class="displayNone">
-                <div>Add Player Information</div>
-                <div><button id="saveInfo">Save</button> <button id="annule">Annule</button></div>
-                <div class="form">
-                    <div class="inpt"> 
-                        <label for="playerName">Player Name</label>
-                        <input type="text" id="playerName" name="name" placeholder="name...">
-                    </div>  
-                    <div class="inpt"> 
-                        <label for="playerPhoto">Player Photo URL</label>
-                        <input type="text" id="playerPhoto" name="photo" placeholder="photo...">
-                    </div>  
-                    <div class="inpt"> 
-                        <label for="playerPosition">Position</label>
-                        <select name="position" id="playerPosition">
-                            <option value="">Position</option>
-                            <option value="GK">GK</option>
-                            <option value="CB">CB</option>
-                            <option value="LB">LB</option>
-                            <option value="RB">RB</option>
-                            <option value="CM">CM</option>
-                            <option value="LW">LW</option>
-                            <option value="RW">RW</option>
-                            <option value="ST">ST</option>
-                            <option value="LM">LM</option>
-                            <option value="RM">RM</option>
-                        </select>
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerNationality">Nationality</label>
-                        <input type="text" id="playerNationality" name="nationality" placeholder="Nationality">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="clubPhoto">Club Photo URL</label>
-                        <input type="text" id="clubPhoto" name="clubPhoto" placeholder="club photo...">
-                    </div>  
-                    <div class="inpt"> 
-                        <label for="playerPace">Pace</label>
-                        <input type="number" id="playerPace" name="pace" placeholder="pace">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerShooting">Shooting</label>
-                        <input type="number" id="playerShooting" name="shooting" placeholder="Shooting">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerPassing">Passing</label>
-                        <input type="number" id="playerPassing" name="passing" placeholder="Passing">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerDribbling">Dribbling</label>
-                        <input type="number" id="playerDribbling" name="dribbling" placeholder="Dribbling">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerDefending">Defending</label>
-                        <input type="number" id="playerDefending" name="defending" placeholder="Defending">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerPhysical">Physical</label>
-                        <input type="number" id="playerPhysical" name="physical" placeholder="Physical">
-                    </div> 
-                    <div class="inpt"> 
-                        <label for="playerRating">Rating</label>
-                        <input type="number" id="playerRating" name="rating" placeholder="rating">
-                    </div> 
+        </div>
+        <div class="formAddplayer display_none ">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Lionel Messi" >
                 </div>
-            </div>
-            <div id="formForModify" class="displayNone">
-                <h2>Modify Player</h2>
-                <div class="inputs">
-                    <input type="text" id="modifyPlayerName" placeholder="Player Name">
-                    <input type="text" id="modifyPlayerPhoto" placeholder="Player Photo URL">
-                    <select id="modifyPlayerPosition" name="select" title="select">
-                        <option value="">Select Position</option>
-                        <option value="ST">ST</option>
-                        <option value="CF">CF</option>
+                <div class="form-group">
+                    <label for="photo">Photo URL</label>
+                    <input type="text" id="photo" name="photo" placeholder="https://cdn.sofifa.net/players/158/023/25_120.png" >
+                </div>
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <select name="position" id="playerPosition">
+                        <option value="">Position</option>
+                        <option value="GK">GK</option>
+                        <option value="CB">CB</option>
+                        <option value="LB">LB</option>
+                        <option value="RB">RB</option>
+                        <option value="CM">CM</option>
                         <option value="LW">LW</option>
                         <option value="RW">RW</option>
-                        <option value="CAM">CAM</option>
-                        <option value="CM">CM</option>
-                        <option value="CDM">CDM</option>
-                        <option value="LB">LB</option>
-                        <option value="CB">CB</option>
-                        <option value="RB">RB</option>
-                        <option value="GK">GK</option>
+                        <option value="ST">ST</option>
+                        <option value="LM">LM</option>
+                        <option value="RM">RM</option>
                     </select>
-                    <input type="text" id="modifyPlayerNationality" placeholder="Nationality">
-                    <input type="text" id="modifyClubPhoto" placeholder="Club Photo URL">
-                    <input type="number" id="modifyPlayerRating" placeholder="Rating" min="1" max="99">
-                    <input type="number" id="modifyPlayerPace" placeholder="Pace" min="1" max="99">
-                    <input type="number" id="modifyPlayerShooting" placeholder="Shooting" min="1" max="99">
-                    <input type="number" id="modifyPlayerPassing" placeholder="Passing" min="1" max="99">
-                    <input type="number" id="modifyPlayerDribbling" placeholder="Dribbling" min="1" max="99">
-                    <input type="number" id="modifyPlayerDefending" placeholder="Defending" min="1" max="99">
-                    <input type="number" id="modifyPlayerPhysical" placeholder="Physical" min="1" max="99">
                 </div>
-                <div class="btns">
-                    <button id="updateInfo">Update Player</button>
-                    <button id="deletPlayer">Delet Player</button>
-                    <button id="cancelModify">Cancel</button>
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="Argentina" >
                 </div>
-            </div>
-            
-            <div id="players"></div> <!-- Ensure this exists to display players -->
+                <div class="form-group">
+                    <label for="flag">Flag URL</label>
+                    <input type="text" id="flag" name="flag" placeholder="https://cdn.sofifa.net/flags/ar.png" >
+                </div>
+                <div class="form-group">
+                    <label for="club">Club</label>
+                    <input type="text" id="club" name="club" placeholder="Inter Miami" >
+                </div>
+                <div class="form-group">
+                    <label for="logo">Club Logo URL</label>
+                    <input type="text" id="logo" name="logo" placeholder="https://cdn.sofifa.net/meta/team/239235/120.png" >
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" placeholder="93" >
+                </div>
+                <div class="form-group">
+                    <label for="pace">Pace</label>
+                    <input type="number" id="pace" name="pace" placeholder="85" >
+                </div>
+                <div class="form-group">
+                    <label for="shooting">Shooting</label>
+                    <input type="number" id="shooting" name="shooting" placeholder="92" >
+                </div>
+                <div class="form-group">
+                    <label for="passing">Passing</label>
+                    <input type="number" id="passing" name="passing" placeholder="91" >
+                </div>
+                <div class="form-group">
+                    <label for="dribbling">Dribbling</label>
+                    <input type="number" id="dribbling" name="dribbling" placeholder="95" >
+                </div>
+                <div class="form-group">
+                    <label for="defending">Defending</label>
+                    <input type="number" id="defending" name="defending" placeholder="35" >
+                </div>
+                <div class="form-group">
+                    <label for="physical">Physical</label>
+                    <input type="number" id="physical" name="physical" placeholder="65" >
+                </div>
+                <div class="form-group btn-container">
+                    <button type="button" class="btn-add">Add Player</button>
+                    <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="formModifierPlayer  display_none ">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Lionel Messi" >
+                </div>
+                <div class="form-group">
+                    <label for="photo">Photo URL</label>
+                    <input type="text" id="photo" name="photo" placeholder="https://cdn.sofifa.net/players/158/023/25_120.png" >
+                </div>
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <select name="position" id="playerPosition">
+                        <option value="">Position</option>
+                        <option value="GK">GK</option>
+                        <option value="CB">CB</option>
+                        <option value="LB">LB</option>
+                        <option value="RB">RB</option>
+                        <option value="CM">CM</option>
+                        <option value="LW">LW</option>
+                        <option value="RW">RW</option>
+                        <option value="ST">ST</option>
+                        <option value="LM">LM</option>
+                        <option value="RM">RM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="Argentina" >
+                </div>
+                <div class="form-group">
+                    <label for="flag">Flag URL</label>
+                    <input type="text" id="flag" name="flag" placeholder="https://cdn.sofifa.net/flags/ar.png" >
+                </div>
+                <div class="form-group">
+                    <label for="club">Club</label>
+                    <input type="text" id="club" name="club" placeholder="Inter Miami" >
+                </div>
+                <div class="form-group">
+                    <label for="logo">Club Logo URL</label>
+                    <input type="text" id="logo" name="logo" placeholder="https://cdn.sofifa.net/meta/team/239235/120.png" >
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="number" id="rating" name="rating" placeholder="93" >
+                </div>
+                <div class="form-group">
+                    <label for="pace">Pace</label>
+                    <input type="number" id="pace" name="pace" placeholder="85" >
+                </div>
+                <div class="form-group">
+                    <label for="shooting">Shooting</label>
+                    <input type="number" id="shooting" name="shooting" placeholder="92" >
+                </div>
+                <div class="form-group">
+                    <label for="passing">Passing</label>
+                    <input type="number" id="passing" name="passing" placeholder="91" >
+                </div>
+                <div class="form-group">
+                    <label for="dribbling">Dribbling</label>
+                    <input type="number" id="dribbling" name="dribbling" placeholder="95" >
+                </div>
+                <div class="form-group">
+                    <label for="defending">Defending</label>
+                    <input type="number" id="defending" name="defending" placeholder="35" >
+                </div>
+                <div class="form-group">
+                    <label for="physical">Physical</label>
+                    <input type="number" id="physical" name="physical" placeholder="65" >
+                </div>
+                <div class="form-group btn-container">
+                    <button type="button" class="btn-seve">Save</button>
+                    <button type="button" class="btn-delet">Delet</button>
+                    <button type="button" class="btn-cancel-modif">Cancel</button>
+                </div>
+            </form>
+        </div>
+      </div>
     </div>
-   
-    <script src="./js/script.js"></script>
-</body>
+    <script src="./js/js2.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- <div class="position- ">
-                <div class="info">
-                    <div class="rating">
-                        <p>90</p>
-                        <p>CF</p>
-                       </div>
-                       <div class="img">
-                        <img src="./img/messi img.webp" alt="">
-                       </div>
-                       <div class="name">
-                        <p>Messi</p>
-                       </div>
-                       <div class="other-info">
-                       
-                           <div class="pace">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                           <div class="shooting">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                           <div class="passing">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                           <div class="dribbling">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                           <div class="defending">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                           <div class="physical">
-                            <p>90</p>
-                            <p>CF</p>
-                           </div>
-                       </div>
-                       
-                       
-                       <div class="flag">
-                        <p>Maroc</p>
-                        
-                       </div>
-                        
-                </div>
-                -->
