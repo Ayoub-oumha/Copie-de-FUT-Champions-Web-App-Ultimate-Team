@@ -71,9 +71,10 @@ function AddplayerToLocale(){
       })
       console.log(p)
       if(!p){
-    
+         
+        
         let newPlayer = {
-            id : dataFromLocalStorage.length + 1 ,
+            id :  1,
             name: inputAndselect[0].value.trim().split(" ")[0] ,
             photo: inputAndselect[1].value ,
             position: inputAndselect[2].value ,

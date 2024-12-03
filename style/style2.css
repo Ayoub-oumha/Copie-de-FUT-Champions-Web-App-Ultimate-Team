@@ -108,8 +108,8 @@ button:hover {
 .player   .info_country{
     display: block ;
     position: absolute;
-    top: 12% ;
-    left: 6%;
+    top: 15% ;
+    left: 7%;
     display: flex;
     flex-direction: column;
     font-weight: bold;
@@ -131,13 +131,13 @@ button:hover {
     width: 20%;
 }
 .player  .imgPlayer {
-    width: 80px;
+    width: 100px;
     position: absolute;
     top: 10%;
     right: 6%;
     border-radius: 50%;
     overflow: hidden;
-    height: 80px ;
+    height: 100px ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -329,13 +329,13 @@ button:hover {
     height: 100%;
   }
   .terian  .position .info-player .imgPlayer {
-    width: 50%;
+    width: 55%;
     height: 36%;
     position: absolute;
     top: 10%;
     right: 50%;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 0px solid white;
     transform: translate(50%);
     display: flex;
     align-items: center;
