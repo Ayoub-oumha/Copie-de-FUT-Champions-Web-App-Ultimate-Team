@@ -96,8 +96,8 @@ button:hover {
     
  gap: 10px;
  padding: 0 10px;
- 
-    height: 100vh;
+    min-height: 100px;
+    max-height: 100vh;
     overflow: auto;
 }
 .player {
@@ -119,25 +119,40 @@ button:hover {
 }
 
 .player  .info_country p {
-   margin-left: 5%;
+   color: white ;
    font-size: 20px;
+   line-height: 18px;
+   width: 20%;
+   text-align: center;
 }
 
 
 .player  .info_country img {
     width: 20%;
 }
-.player  .imgPlayer img{
-    width: 50%;
+.player  .imgPlayer {
+    width: 80px;
     position: absolute;
     top: 10%;
     right: 6%;
     border-radius: 50%;
+    overflow: hidden;
+    height: 80px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.player  .imgPlayer img{
+    width: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+   height: 100%;
     border: 2px solid white;
 }
 .player .namePlayer {
     position: absolute;
-    bottom: 42%;
+    bottom: 40%;
     right: 50%;
     transform: translate(50%);
     font-size: 20px;
@@ -150,16 +165,28 @@ button:hover {
 .player .sta1{
     position: absolute;
     bottom: 12%;
-    left: 16%;
+    right: 50%;
+    transform: translate(50%);
     display: flex;
     flex-wrap: wrap;
     column-gap: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
    
 }
 
 .player .sta1 p{
     text-align: center;
     font-weight:bolder;
+    text-align: center;
+    font-size: 14px;
+}
+.player .sta1 p:first-child {
+    color: rgb(255, 230, 0);
 }
 
 /* form add player */
@@ -197,12 +224,13 @@ button:hover {
     color: #bbb;
 }
 .form-group button {
-    width: 48%;
+    width: 30%;
     padding: 10px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    text-align: center;
 }
 .form-group .btn-add {
     background-color: #28a745;
@@ -211,7 +239,7 @@ button:hover {
 .form-group .btn-add:hover {
     background-color: #218838;
 }
-.form-group .btn-cancel {
+.form-group .btn-cancel , .btn-cancel-modif {
     background-color: #dc3545;
     color: #fff;
 }
@@ -236,9 +264,16 @@ button:hover {
     position: absolute;
     transition: all 0.5s;
     width: 16%;
+    background-image: url("../img/placeholder-card-normal.webp");
+    width: 17%;
+    height: 16%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .position #imgbg{
     width: 100%;
+    display: none;
 }
 
 
@@ -289,51 +324,105 @@ button:hover {
     bottom: 78%;
     left: 30%;
   }
-
-  .terian  .position .info-player .imgPlayer img{
-    width: 70%;
+  .terian  .position .imgbg {
+    width: 100%;
+    height: 100%;
+  }
+  .terian  .position .info-player .imgPlayer {
+    width: 50%;
+    height: 36%;
     position: absolute;
     top: 10%;
     right: 50%;
     border-radius: 50%;
     border: 2px solid white;
     transform: translate(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .terian  .position .info-player .imgPlayer img{
+    width: 100%;
+    height: 100%;
+    border: none;
+     
+
 }
-.terian  .position .info-player .info_country{
-    display: block ;
+.terian  .position  .info_country{
+   
     position: absolute;
    
     
-    display: flex;
-    right: 50%;
-    transform: translate(50%);
     gap: 5%;
-    bottom: 13%;
+    top: 58%;
+    flex-direction: row ;
+    width: 100% ;
+    height: max-content;
+   
+    left: 0;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    column-gap: 7px;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+   
 
 }
 .terian  .position .info-player .info_country p {
     font-size: 13px;
+    flex: 0 1 calc(50% - 16px); /* Adjust width for two items per row */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: centers text inside the element */
+    text-align: center;
+    font-weight: 500;
 }
 .terian  .position .namePlayer {
     position: absolute;
-    top: 58% ;
+    top: 47% ;
     right: 50%;
     transform: translate(50%);
     font-size: 12px;
- 
-    white-space: nowrap;
-    
-    
+    white-space: nowrap;  
 }
 .terian  .position .info-player .info_country img {
-    width: 20%;
-    display: none;
+    /* width: 32%; */
+   
+    height: 16px;
+    background: #000;
+
+    /* display: none; */
+    flex: 0 1 calc(50% - 16px); /* Adjust width for two items per row */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional: centers text inside the element */
 }
   
   .terian  .position .info-player .sta1{
     display:none;
     
   }
+
+
+  .formModifierPlayer {
+    position: absolute;
+    width: 320px;
+    
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 77;
+    top: 20px;
+    z-index: 55;
+}
 
 /* Styles pour les tablettes (largeur entre 768px et 1024px) */
 @media  (max-width: 1024px) {
@@ -388,6 +477,19 @@ button:hover {
         width: 100%;
         height: fit-content;
     }
+}
+@media (max-width: 500px) {
+    .terian  .position  .info_country{
+        display: none;
+    }
+    .terian  .position .namePlayer {
+        
+        top: 65% ;
+        
+    }
+    .terian  .position .info-player .imgPlayer {
+        width: 76%;
+        height: 54%; }
 }
 
 

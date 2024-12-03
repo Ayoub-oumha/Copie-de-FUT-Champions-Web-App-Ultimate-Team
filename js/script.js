@@ -345,7 +345,73 @@ function modificationPlayer() {
         }
     });
 }
- 
+
+// Call playersFromLocalStorage to load players and set up modification
+function playersFromLocalStorage() {
+    let players = document.getElementById("players");
+    players.textContent = ""; // Clear existing players
+    let dataFromlocalStorage = JSON.parse(localStorage.getItem("data")) || [];
+    
+    dataFromlocalStorage.forEach((element, index) => {
+        let posi = document.createElement("div");
+        posi.classList = "position";
+        let content = `<div class="info" draggable="true">
+                        <div class="rating">
+                            <p>${element.rating}</p>
+                            <p>${element.position}</p>
+                        </div>
+                        <div class="img">
+                            <img src="${element.photo}" alt="">
+                        </div>
+                        <div class="name">
+                            <p>${element.name}</p>
+                        </div>
+                        <div class="other-info">
+                            <div class="pace">
+                                <p>PAC</p>
+                                <p>${element.pace}</p>
+                            </div>
+                            <div class="shooting">
+                                <p>SHO</p>
+                                <p>${element.shooting}</p>
+                            </div>
+                            <div class="passing">
+                                <p>PAS</p>
+                                <p>${element.passing}</p>
+                            </div>
+                            <div class="dribbling">
+                                <p>DRI</p>
+                                <p>${element.dribbling}</p>
+                            </div>
+                            <div class="defending">
+                                <p>DEF</p>
+                                <p>${element.defending}</p>
+                            </div>
+                            <div class="physical">
+                                <p>PHY</p>
+                                <p>${element.physical}</p>
+                            </div>
+                        </div>
+                        <div class="flagPhoto">
+                            <img src="${element.flag}" alt="">
+                        </div>
+                        <div class="flag">
+                            <p>${element.nationality}</p>
+                        </div>
+                        <button class="deletePlayer" data-index="${index}">X</button>
+                    </div>`;
+        
+        posi.innerHTML = content;
+        players.append(posi);
+    });
+
+    modificationPlayer(); // Set up modification functionality
+    DeletPlayer(); // Set up delete button functionality
+}
+
+// Ensure to call playersFromLocalStorage when the DOM is ready
+document.addEventListener("DOMContentLoaded", playersFromLocalStorage);
+
 
 
 function DeletPlayer() {
