@@ -275,13 +275,22 @@ function  DrageAndDrop(){
         })
         posi.addEventListener('drop' , ()=>{
             posi.style.filter= "none";
-            if (draggedElement && posi.children.length === 0 ) {
+            if(posi.children.length === 1 ){
+                let existCart = posi.children[0] ;
+                let parentBox = draggedElement.parentElement ;
+
+                parentBox.appendChild(existCart) ;
+
+                posi.appendChild(draggedElement) ;
+
+            }
+            else if (draggedElement && posi.children.length === 0 ) {
                     // posi.textContent = ""
                     posi.appendChild(draggedElement); // Append the dragged element
                     posi.style.filter = "none";
                    console.log(posi.children.length) ;
                 }
-                else console.log("non")
+               
         })
         
         
