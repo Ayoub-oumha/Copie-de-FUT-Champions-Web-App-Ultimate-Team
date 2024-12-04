@@ -193,7 +193,8 @@ button:hover {
 
 .formAddplayer {
     position: absolute;
-    width: 320px;
+    /* width: 320px; */
+    width: 426px;
     
     padding: 20px;
     background-color: #333;
@@ -232,14 +233,14 @@ button:hover {
     cursor: pointer;
     text-align: center;
 }
-.form-group .btn-add {
+.form-group .btn-add , .btn-seve {
     background-color: #28a745;
     color: #fff;
 }
 .form-group .btn-add:hover {
     background-color: #218838;
 }
-.form-group .btn-cancel , .btn-cancel-modif {
+.form-group .btn-cancel , .btn-cancel-modif , .btn-delet {
     background-color: #dc3545;
     color: #fff;
 }
@@ -411,8 +412,10 @@ button:hover {
 
   .formModifierPlayer {
     position: absolute;
-    width: 320px;
-    
+    /* width: 320px; */
+    /* width: max-content; */
+    width: 426px;
+
     padding: 20px;
     background-color: #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -423,6 +426,16 @@ button:hover {
     top: 20px;
     z-index: 55;
 }
+.formFor {
+    gap: 20px;
+    display: flex ;
+    flex-wrap: wrap ;
+    flex-direction: row;
+    width: 100%;
+    
+
+}
+
 
 /* Styles pour les tablettes (largeur entre 768px et 1024px) */
 @media  (max-width: 1024px) {
@@ -477,6 +490,7 @@ button:hover {
         width: 100%;
         height: fit-content;
     }
+  
 }
 @media (max-width: 500px) {
     .terian  .position  .info_country{
@@ -490,6 +504,17 @@ button:hover {
     .terian  .position .info-player .imgPlayer {
         width: 76%;
         height: 54%; }
+        .formModifierPlayer {
+            /* position: absolute; */
+            width: 320px;
+        }
+        .formAddplayer {
+            /* position: absolute; */
+            width: 320px;
+        }
+        .formFor div {
+            width: 100%;
+        }
 }
 
 

@@ -34,7 +34,8 @@ function AddplayerToLocale(){
     let btnCancel = document.querySelector(".btn-cancel")
     let btnAdd  = document.querySelector(".btn-add") ;
     let inputAndselect = document.querySelectorAll(".formAddplayer input , .formAddplayer select")
-    let dataFromLocalStorage = JSON.parse(localStorage.getItem("dataPlayer"))  || [] ;
+   
+    let idOf  = localStorage.getItem("idOfplayer") || 1 ;
    
     
     btnAddPlyaer.addEventListener("click" , ()=>{
@@ -71,10 +72,9 @@ function AddplayerToLocale(){
       })
       console.log(p)
       if(!p){
-         
-        
-        let newPlayer = {
-            id :  1,
+          
+          let newPlayer = {
+            id : parseInt(idOf) ,
             name: inputAndselect[0].value.trim().split(" ")[0] ,
             photo: inputAndselect[1].value ,
             position: inputAndselect[2].value ,
@@ -90,10 +90,15 @@ function AddplayerToLocale(){
             defending:  inputAndselect[12].value,
             physical:  inputAndselect[13].value,
         }
+        
+        let dataFromLocalStorage = JSON.parse(localStorage.getItem("dataPlayer"))  || [] ;
         dataFromLocalStorage.push(newPlayer);
         localStorage.setItem("dataPlayer" , JSON.stringify(dataFromLocalStorage))
         console.log(dataFromLocalStorage)
         divAddplayer.classList.toggle("display_none")
+
+        idOf++ ;
+        localStorage.setItem("idOfplayer" , idOf) ;
         
         AddplayerToBoxOfplayers()
         modificationPlayer()
@@ -181,6 +186,9 @@ function modificationPlayer(){
             let idOfpkyaer = parseInt(player.id)
           
            index = dataFromLocalStorage.findIndex(p => p.id === idOfpkyaer) ; 
+        //    console.log(index)
+        //    console.log(dataFromLocalStorage)
+        //    console.log(dataFromLocalStorage[index])
         //    console.log(dataFromLocalStorage[index])
            inputandselectForModif[0].value = dataFromLocalStorage[index].name ;
            inputandselectForModif[1].value = dataFromLocalStorage[index].photo ;
@@ -225,10 +233,13 @@ function modificationPlayer(){
                 dataFromLocalStorage[index].defending = inputandselectForModif[12].value
                 dataFromLocalStorage[index].physical = inputandselectForModif[13].value
                 localStorage.setItem("dataPlayer" , JSON.stringify(dataFromLocalStorage))
+                
                 AddplayerToBoxOfplayers()
                 
                 formModifierPlayer.classList.add("display_none") ;
                 modificationPlayer()
+                DrageAndDrop() ;
+                console.log("done")
                 
             }
            
@@ -240,6 +251,8 @@ function modificationPlayer(){
             
             formModifierPlayer.classList.add("display_none") ;
             modificationPlayer()
+            DrageAndDrop() ;
+            console.log("donee")
         })
 
         })
